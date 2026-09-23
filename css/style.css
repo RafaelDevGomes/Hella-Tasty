@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#logo{
+    height: 100px;
+    width: 50px;
+}
+
+@media (min-width: 992px) {
+  main, .conteudo-principal { 
+    margin-left: 280px; 
+    padding: 20px;
+    border: 5px black;
+  }
+}
+
+.icones{
+    height: 50px;
+    width: 50px;
+}
