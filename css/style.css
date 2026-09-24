@@ -10,13 +10,30 @@
 
 @media (min-width: 992px) {
   main, .conteudo-principal { 
-    margin-left: 280px; 
-    padding: 20px;
+    margin-left: 280px;
     border: 5px black;
   }
+}
+
+.pesquisa {
+    margin-left: 280px;
+    padding: 10px 20px;
+    height: 60px;
 }
 
 .icones{
     height: 50px;
     width: 50px;
+}
+:hover.icones{
+  padding: 7px;
+  transition: 0.2s;
+}
+
+main {
+  background-color: #FF4C1F;
+  width: 70%;
+  border-radius: 15px;
+  padding: 20px;
+  margin-left: 20%;
 }
