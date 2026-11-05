@@ -52,8 +52,9 @@ footer {
   font-size: 15px;
 }
 .mini {
-  height: 50px;
-  width: 50px;
+  height: 45px;
+  width: 45px;
+  margin-left: 5px;
 }
 :hover.mini{
   padding: 5px;
