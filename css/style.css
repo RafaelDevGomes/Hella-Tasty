@@ -60,3 +60,53 @@ footer {
   padding: 5px;
   transition: 0.3s;
 }
+.card{
+  overflow: hidden;
+  border-radius: 20px;
+  border: none;
+  position: relative;
+}
+.card-title{
+  color: white;
+}
+.card-text1{
+  color: white;
+}
+.card-img1{
+   
+  height: 220px;
+  width: 200px;
+  object-fit: cover;
+  object-position: center;
+  
+}
+
+.card-img-overlay {
+  background: rgba(0, 0, 0, 0.4); /* Cria uma camada escura leve para o texto destacar */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Joga o texto para a parte de baixo do card */
+}
+
+.card-title, .card-text1 {
+  color: #fff !important;
+}
+
+@media (max-width: 768px) {
+  .card-img1 {
+    height: 180px;
+  }
+}
+
+.card-main{
+  background-color: #FFE0A3;
+  width: 100%;
+}
+
+.card-main-title{
+  color: black;
+}
+
+.card-main-text{
+  color: rgb(0, 0, 0);
+}
