@@ -1,11 +1,270 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Receitas</title>
+
+    <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="../css/receitas.css">
 </head>
+
 <body>
-    <H1>SITE EM CONSTRUÇÃO!</H1>
+
+    <header>
+        <button class="btn btn-dark d-lg-none m-2" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#sidebarLateral" aria-controls="sidebarLateral">
+            <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+            Menu
+        </button>
+
+        <div class="offcanvas-lg offcanvas-start bg-body-tertiary border-end vh-100 p-3" tabindex="-1"
+            id="sidebarLateral" aria-labelledby="sidebarLateralLabel"
+            style="width: 220px; position: fixed; top: 0; left: 0; z-index: 1050;">
+
+            <div class="offcanvas-header d-flex justify-content-between align-items-center w-100">
+
+                <a class="navbar-brand" href="index.html">
+                    <img src="../img/logo.png" id="logo" alt="logo do site">
+                </a>
+
+                <button type="button" class="btn-close d-lg-none" data-bs-dismiss="offcanvas"
+                    data-bs-target="#sidebarLateral" aria-label="Close">
+                </button>
+
+            </div>
+
+            <div class="offcanvas-body d-flex flex-column justify-content-between h-100 mt-3">
+
+                <ul class="navbar-nav flex-column w-100 mb-auto">
+
+                    <li class="nav-item mb-2">
+                        <a class="nav-link active" href="index.html">
+                            <img src="https://cdn-icons-png.flaticon.com/512/25/25694.png" class="icones" alt="">
+                            Home
+                        </a>
+                    </li>
+
+                    <li class="nav-item mb-2">
+                        <a class="nav-link" href="../html/receitas.html">
+                            <img src="https://cdn-icons-png.flaticon.com/512/483/483845.png" class="icones" alt="">
+                            Receitas
+                        </a>
+                    </li>
+
+                    <li class="nav-item mb-2">
+                        <a class="nav-link" href="../html/aleatorios.html">
+                            <img src="https://www.svgrepo.com/show/322962/perspective-dice-six-faces-random.svg"
+                                class="icones" alt="">
+                            Aleátorio
+                        </a>
+                    </li>
+
+                    <li class="nav-item mb-2">
+                        <a class="nav-link" href="../html/missoes.html">
+                            <img src="https://cdn-icons-png.flaticon.com/512/649/649126.png" class="icones" alt="">
+                            Missões
+                        </a>
+                    </li>
+
+                    <li class="nav-item mb-2">
+                        <a class="nav-link" href="../html/resalvas.html">
+                            <img src="https://cdn-icons-png.flaticon.com/512/1828/1828961.png" class="icones" alt="">
+                            Receitas Salvas
+                        </a>
+                    </li>
+
+                    <li class="nav-item mb-2">
+                        <a class="nav-link" href="../html/sobre.html">
+                            <img src="https://cdn-icons-png.flaticon.com/512/6421/6421323.png" class="icones" alt="">
+                            Sobre Nós
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <form class="d-flex pesquisa" role="search">
+
+        <input class="form-control me-2" type="search" placeholder="Pesquisar receitas.." aria-label="pesquisar">
+
+        <button class="btn btn-outline-success" type="submit">
+            Enviar
+        </button>
+
+        <a href="config.html">
+            <img src="https://cdn-icons-png.flaticon.com/512/3524/3524636.png" class="mini" alt="">
+        </a>
+
+        <a href="perfil.html">
+            <img src="https://static.vecteezy.com/ti/vetor-gratis/p1/7033146-perfil-icone-login-head-icon-vetor.jpg"
+                class="mini" alt="">
+        </a>
+
+    </form>
+
+    <br>
+
+    <!-- MAIN -->
+    <main>
+
+        <!-- FILTROS -->
+        <div class="filtros">
+
+            <h2>Filtro:</h2>
+
+            <select class="form-select">
+                <option selected>Pratos</option>
+                <option>Café da manhã</option>
+                <option>Almoço</option>
+                <option>Jantar</option>
+                <option>Lanches</option>
+            </select>
+
+            <select class="form-select">
+                <option selected>Dificuldades</option>
+                <option>Fácil</option>
+                <option>Médio</option>
+                <option>Difícil</option>
+            </select>
+
+            <select class="form-select">
+                <option selected>Sobremesa</option>
+                <option>Bolos</option>
+                <option>Doces</option>
+                <option>Tortas</option>
+            </select>
+
+        </div>
+
+        <!-- CARDS -->
+        <section class="receitas">
+
+            <div class="card receita-card">
+                <img src="../img/carne.webp" class="card-img-top" alt="Filé mignon">
+                <div class="card-body">
+                    <div class="titulo-card">
+                        <h5>Filé mignon</h5>
+                        <span>6.7</span>
+                    </div>
+                    <p>Perfeito para um delicioso almoço em família.</p>
+                </div>
+            </div>
+
+            <div class="card receita-card">
+                <img src="../img/spaghetti.jpg" class="card-img-top" alt="Spaghetti">
+                <div class="card-body">
+                    <div class="titulo-card">
+                        <h5>Spaghetti</h5>
+                        <span>6.7</span>
+                    </div>
+                    <p>Clássico da Itália.</p>
+                </div>
+            </div>
+
+            <div class="card receita-card">
+                <img src="../img/pastel.jpg" class="card-img-top" alt="Pastel de queijo">
+                <div class="card-body">
+                    <div class="titulo-card">
+                        <h5>Pastel de queijo</h5>
+                        <span>6.7</span>
+                    </div>
+                    <p>Pastel sempre vai bem com caldo de cana.</p>
+                </div>
+            </div>
+
+            <div class="card receita-card">
+                <img src="../img/coxinha.webp" class="card-img-top" alt="Coxinha">
+                <div class="card-body">
+                    <div class="titulo-card">
+                        <h5>Coxinha</h5>
+                        <span>6.7</span>
+                    </div>
+                    <p>Típica coxinha brasileira.</p>
+                </div>
+            </div>
+
+            <div class="card receita-card">
+                <img src="../img/mousse.webp" class="card-img-top" alt="Mousse de maracujá">
+                <div class="card-body">
+                    <div class="titulo-card">
+                        <h5>Mousse de maracujá</h5>
+                        <span>6.7</span>
+                    </div>
+                    <p>Perfeito para sobremesa.</p>
+                </div>
+            </div>
+
+            <div class="card receita-card">
+                <img src="../img/bolo.webp" class="card-img-top" alt="Bolo de chocolate">
+                <div class="card-body">
+                    <div class="titulo-card">
+                        <h5>Bolo de chocolate</h5>
+                        <span>6.7</span>
+                    </div>
+                    <p>Bolo de chocolate saudável.</p>
+                </div>
+            </div>
+
+            <div class="card receita-card">
+                <img src="../img/torta.jpg" class="card-img-top" alt="Torta de limão">
+                <div class="card-body">
+                    <div class="titulo-card">
+                        <h5>Torta de limão</h5>
+                        <span>6.7</span>
+                    </div>
+                    <p>Perfeito para sobremesa.</p>
+                </div>
+            </div>
+
+            <div class="card receita-card">
+                <img src="../img/yakisoba.jpg" class="card-img-top" alt="Yakisoba">
+                <div class="card-body">
+                    <div class="titulo-card">
+                        <h5>Yakisoba</h5>
+                        <span>6.7</span>
+                    </div>
+                    <p>Clássico do Japão.</p>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container-fluid">
+            <div class="col-12">
+                <div class="row">
+                    <p>
+                        Equipe Hella-Tasty© todos os direitos reservados <br>
+
+                        <a href="https://www.google.com/goto?url=CAESUwHEIkXX55y_Jy2tQNOSdqp9mT-7r1_M0H3HhYOmyJmXAu77ILsABkRD3MlGmBQ7mPmogwXgFxTqOe3hKgvFLbMaS-9JEeUPAMsQTeeHlXVN2ZBs"
+                            target="_blank">
+                            <img src="https://s3-symbol-logo.tradingview.com/twitter--600.png" class="mini" alt="">
+                        </a>
+
+                        <a href="https://www.instagram.com/hella_tastyxd?rpxt=c2h6bjh0dnR5emRj" target="_blank">
+                            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968776.png" class="mini" alt="">
+                        </a>
+
+                        <a href="index.html">
+                            <img src="../img/logo.png" class="mini" alt="">
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
 </body>
+
 </html>

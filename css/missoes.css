@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#logo{
+    height: 100px;
+    width: 50px;
+}
+
+@media (min-width: 992px) {
+  main, .conteudo-principal { 
+    margin-left: 220px;
+    border: 5px black;
+  }
+}
+
+.pesquisa {
+    margin-left: 90%;
+    padding: 10px 20px;
+    height: 60px;
+}
+
+.icones{
+    height: 35px;
+    width: 35px;
+}
+:hover.icones{
+  padding: 7px;
+  transition: 0.2s;
+}
+
+main {
+  background-color: #FF4C1F;
+  width: 70%;
+  border-radius: 15px;
+  padding: 20px;
+  margin-left: 20%;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  font-size: 38px;
+  text-align: center;
+  position: 0;
+  width: 100%;
+  margin-top: 30px;
+  padding: 30px;
+}
+.nav-link{
+  font-size: 15px;
+}
+.mini {
+  height: 45px;
+  width: 45px;
+  margin-left: 5px;
+}
+:hover.mini{
+  padding: 5px;
+  transition: 0.3s;
+}
+
+.missao {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.titulo-missao {
+  margin-left: 65%;
+  margin-bottom: 5%;
+}
+
+.bloco-missao {
+  margin-left: 5%;
+}
+
+.card {
+  width: 900px;
+  margin-bottom: 5%;
+}
+
