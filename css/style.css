@@ -1,29 +1,57 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
+
+#sidebarLateral {
+  background-color: #FF4C1F !important;
+  color: #fff;
+}
+
+#sidebarLateral h3 {
+  color: #fff;
+}
+
+#sidebarLateral .nav-link {
+  color: #fff !important;
+  font-size: 15px;
+}
+
+#sidebarLateral .nav-link:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+body {
+  background-image: url(../img/wallpaper.png);
+  background-color: #FF4C1F;
+  font-family: itim;
+}
+
 #logo{
-    height: 100px;
-    width: 50px;
+  height: 100px;
+  width: 50px;
 }
 
 @media (min-width: 992px) {
   main, .conteudo-principal { 
-    margin-left: 220px;
-    border: 5px black;
+  margin-left: 220px;
+  border: 5px black;
   }
 }
 
 .pesquisa {
-    margin-left: 220px;
-    padding: 10px 20px;
-    height: 60px;
+  margin-left: 220px;
+  padding: 10px 20px;
+  height: 60px;
+  background-color: #FF4C1F;
+  border-radius: 50px;
 }
 
 .icones{
-    height: 35px;
-    width: 35px;
+  height: 35px;
+  width: 35px;
 }
 :hover.icones{
   padding: 7px;
@@ -48,9 +76,7 @@ footer {
   margin-top: 30px;
   padding: 30px;
 }
-.nav-link{
-  font-size: 15px;
-}
+
 .mini {
   height: 45px;
   width: 45px;
@@ -73,12 +99,10 @@ footer {
   color: white;
 }
 .card-img1{
-   
   height: 220px;
   width: 200px;
   object-fit: cover;
   object-position: center;
-  
 }
 
 .card-img-overlay {
