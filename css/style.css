@@ -91,6 +91,9 @@ footer {
   border-radius: 20px;
   border: none;
   position: relative;
+  height: 100%;
+  position: relative;
+  flex-direction: column;
 }
 .card-title{
   color: white;
