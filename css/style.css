@@ -10,23 +10,28 @@
 }
 
 #sidebarLateral h3 {
-  color: #fff;
+  color: #000000;
+
 }
 
 #sidebarLateral .nav-link {
-  color: #fff !important;
-  font-size: 15px;
+  color: #000000 !important;
+  font-size: 20px;
+  background-color: #FFE0A3;
+  border-radius: 5px;
+
 }
 
 #sidebarLateral .nav-link:hover {
   background-color: rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
+  
 }
 
 body {
   background-image: url(../img/wallpaper.png);
   background-color: #FF4C1F;
   font-family: itim;
+  font-style: italic;
 }
 
 #logo{
