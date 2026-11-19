@@ -9,6 +9,29 @@
     width: 50px;
 }
 
+#sidebarLateral {
+  background-color: #FF4C1F !important;
+  color: #fff;
+}
+
+#sidebarLateral h3 {
+  color: #000000;
+
+}
+
+#sidebarLateral .nav-link {
+  color: #000000 !important;
+  font-size: 20px;
+  background-color: #FFE0A3;
+  border-radius: 5px;
+
+}
+
+#sidebarLateral .nav-link:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  
+}
+
 /* MENU */
 @media (min-width: 992px) {
     main {
@@ -21,6 +44,12 @@
     text-decoration: none;
     color: white;
     margin-bottom: 15px;
+}
+
+body {
+  background-image: url(../img/wallpaper.png);
+  background-color: #FF4C1F;
+  font-family: itim;
 }
 
 #logo {
@@ -65,9 +94,11 @@
 
 /* BARRA DE PESQUISA */
 .pesquisa {
-    margin-left: 220px;
-    padding: 10px 20px;
-    height: 60px;
+  margin-left: 220px;
+  padding: 10px 20px;
+  height: 60px;
+  background-color: #FF4C1F;
+  border-radius: 50px;
 }
 
 .icones {
@@ -101,12 +132,31 @@ main {
     width: 100%;
     border-radius: 10px;
     overflow: hidden;
+    background-color: #FFE0A3;
+    /* [NOVO] */
+    border: 2px solid #000;
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+}
+
+
+.receita-card:hover {
+    transform: translateY(-8px) rotate(-1deg);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
+    background-color: #FFD27A;
 }
 
 .receita-card img {
     width: 100%;
     height: 180px;
     object-fit: cover;
+    /* [NOVO] */
+    transition: transform 0.4s ease;
+}
+
+
+.receita-card:hover img {
+    transform: scale(1.08);
 }
 
 /* TÍTULO E NOTA DOS CARDS */
@@ -120,6 +170,76 @@ main {
 .titulo-card h5 {
     font-size: 16px;
     margin: 0;
+}
+
+
+.titulo-card span {
+    border: 2px solid #FF4C1F;
+    padding: 0 5px;
+    transition: background-color 0.25s, color 0.25s;
+}
+
+.receita-card:hover .titulo-card span {
+    background-color: #FF4C1F;
+    color: #fff;
+}
+
+
+.pagina {
+    display: none;
+}
+
+#pag1:checked ~ .pagina-1,
+#pag2:checked ~ .pagina-2 {
+    display: grid;
+}
+
+.pagina-radio {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.paginacao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.paginacao label {
+    font-size: 28px;
+    line-height: 1;
+    color: #fff;
+    min-width: 36px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 18px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.paginacao label:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    transform: scale(1.15);
+}
+
+#pag1:checked ~ .paginacao .num-1,
+#pag2:checked ~ .paginacao .num-2 {
+    background-color: #FF4C1F;
+    outline: 2px solid #fff;
+}
+
+.seta {
+    visibility: hidden;
+}
+
+#pag2:checked ~ .paginacao .seta-ant,
+#pag1:checked ~ .paginacao .seta-prox {
+    visibility: visible;
 }
 
 /* FOOTER */
