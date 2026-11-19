@@ -1,0 +1,160 @@
+/* =========================================
+   sobre.css — página "Sobre Nós" Hella-Tasty
+   ========================================= */
+
+/* ---- Área principal ---- */
+.sobre-main {
+  min-height: calc(100vh - 70px);
+  padding: 1.5rem;
+
+  /* Fundo laranja com doodles de comida */
+  background-color: #FF4C1F;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Cg stroke='%23b85e10' stroke-width='2' fill='none' opacity='0.28'%3E%3C!-- Garfo --%3E%3Cline x1='22' y1='8' x2='22' y2='85'/%3E%3Cline x1='15' y1='8' x2='15' y2='30'/%3E%3Cline x1='22' y1='8' x2='22' y2='30'/%3E%3Cline x1='29' y1='8' x2='29' y2='30'/%3E%3Cline x1='15' y1='30' x2='29' y2='30'/%3E%3C!-- Prato --%3E%3Ccircle cx='130' cy='50' r='32'/%3E%3Ccircle cx='130' cy='50' r='22'/%3E%3C!-- Faca --%3E%3Cline x1='170' y1='8' x2='170' y2='85'/%3E%3Cpath d='M170%2C8 Q183%2C26 170%2C44'/%3E%3C!-- Xícara --%3E%3Crect x='55' y='115' width='30' height='35' rx='4'/%3E%3Cline x1='63' y1='150' x2='77' y2='150'/%3E%3Cpath d='M85%2C122 Q96%2C132 85%2C142'/%3E%3C!-- Colher --%3E%3Cellipse cx='155' cy='140' rx='9' ry='13'/%3E%3Cline x1='155' y1='153' x2='155' y2='190'/%3E%3C!-- Pizza slice --%3E%3Cpath d='M50%2C170 L70%2C150 L90%2C170 Z'/%3E%3Ccircle cx='70' cy='162' r='3' fill='%23b85e10'/%3E%3Ccircle cx='63' cy='167' r='2' fill='%23b85e10'/%3E%3Ccircle cx='77' cy='167' r='2' fill='%23b85e10'/%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 200px 200px;
+}
+
+/* Offset do sidebar em telas grandes */
+@media (min-width: 992px) {
+  .sobre-main {
+    margin-left: 220px;
+  }
+}
+
+/* ---- Banner ---- */
+.banner-wrapper {
+  margin-bottom: 2rem;
+}
+
+.banner-titulo {
+  background-color: #E07825;
+  border: 3px solid #fff;
+  border-bottom: none;
+  border-radius: 10px 10px 0 0;
+  padding: 1rem 2rem;
+  text-align: center;
+}
+
+.banner-titulo h1 {
+  color: #fff;
+  font-weight: 900;
+  font-size: clamp(1rem, 2.8vw, 2.1rem);
+  letter-spacing: 2px;
+  margin: 0;
+  font-family: 'Itim', cursive;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.35);
+}
+
+.banner-subtitulo {
+  background-color: #2e1407;
+  color: #fff;
+  text-align: center;
+  padding: 0.55rem 2rem;
+  border-radius: 0 0 10px 10px;
+  font-family: 'Itim', cursive;
+  font-size: 1.1rem;
+}
+
+/* ---- Grid da equipe ---- */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+}
+
+@media (max-width: 1200px) {
+  .team-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---- Card de membro ---- */
+.membro-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  background-color: #FFE0A3;
+}
+
+/* Foto / placeholder */
+.membro-foto {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background-color: #bf7050;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.membro-foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Se a imagem não carregar, mostra só o fundo marrom */
+.membro-foto img[src=""],
+.membro-foto img:not([src]) {
+  display: none;
+}
+
+/* Nome */
+.membro-nome {
+  background-color: #E07825;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.5rem 0.75rem;
+  font-family: 'Itim', cursive;
+}
+
+/* Descrição */
+.membro-descricao {
+  color: #000000;
+  padding: 0.55rem 0.75rem;
+  font-size: 0.82rem;
+  text-align: center;
+  flex: 1;
+  background-color: rgba(0, 0, 0, 0.08);
+  font-style: italic;
+}
+
+/* Citação / bordão */
+.membro-citacao {
+  color: #000000;
+  font-size: 0.8rem;
+  padding: 0.4rem 0.75rem;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.12);
+  font-style: italic;
+}
+
+/* Ícones inferiores (redes sociais, etc.) */
+.membro-icons {
+  display: flex;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.icon-sq {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+}
