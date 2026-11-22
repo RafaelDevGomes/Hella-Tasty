@@ -1,0 +1,369 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#logo {
+    height: 100px;
+    width: 50px;
+}
+
+#sidebarLateral {
+  background-color: #FF4C1F !important;
+  color: #fff;
+}
+
+#sidebarLateral h3 {
+  color: #000000;
+
+}
+
+#sidebarLateral .nav-link {
+  color: #000000 !important;
+  font-size: 20px;
+  background-color: #FFE0A3;
+  border-radius: 5px;
+
+}
+
+#sidebarLateral .nav-link:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  
+}
+
+/* MENU */
+@media (min-width: 992px) {
+    main {
+        margin-left: 220px;
+    }
+}
+
+.logo-area {
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    margin-bottom: 15px;
+}
+
+body {
+  background-image: url(../img/wallpaper.png);
+  background-color: #FF4C1F;
+  font-family: itim;
+}
+
+#logo {
+    height: 55px;
+    width: 55px;
+    object-fit: contain;
+    margin-top: 5px;
+}
+
+.logo-area h4 {
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+
+
+
+/* BARRA DE PESQUISA */
+.pesquisa {
+  margin-left: 220px;
+  padding: 10px 20px;
+  height: 60px;
+  background-color: #FF4C1F;
+  border-radius: 50px;
+}
+
+.icones {
+    height: 35px;
+    width: 35px;
+}
+
+:hover.icones {
+    padding: 7px;
+    transition: 0.2s;
+}
+
+
+/* MAIN - PERFIL */
+
+main {
+    background-color: #FF7352;
+    width: 70%;
+    max-width: 900px;
+    border: 12px solid #B52A20;
+    border-radius: 20px;
+    padding: 0;
+    margin: 40px auto 0;
+    margin-left: max(240px, calc(220px + (100% - 220px - 900px) / 2));
+    overflow: hidden;
+}
+
+/* CABEÇALHO */
+
+.perfil-cabecalho {
+    background-color: #FF4C1F;
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    padding: 12px 35px;
+    min-height: 250px;
+    border-bottom: 13px solid #FF9A82;
+}
+
+/* FOTO DE PERFIL */
+
+.avatar-img {
+    width: 215px;
+    height: 215px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* NOME E DATA */
+
+.perfil-identificacao {
+    flex: 1;
+}
+
+.perfil-nome {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    border-bottom: 10px solid #FFE0A3;
+    color: white;
+}
+
+.perfil-nome h1 {
+    font-size: 55px;
+    margin: 0;
+}
+
+.perfil-nome span {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: white;
+}
+
+/* INFORMAÇÕES */
+
+.perfil-informacoes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 55px 40px;
+    min-height: 300px;
+}
+
+.estatisticas,
+.experiencia {
+    background-color: #FFE0A3;
+    border: 7px solid #B52A20;
+    border-radius: 50px;
+    padding: 15px;
+    text-align: center;
+    color: #851510;
+}
+
+.estatisticas p {
+    font-size: 32px;
+    margin: 5px 0;
+}
+
+.experiencia {
+    min-width: 260px;
+}
+
+.experiencia .nivel {
+    font-size: 28px;
+    margin: 0;
+}
+
+.experiencia h2 {
+    font-size: 40px;
+    margin: 20px 0 0;
+}
+
+.experiencia span {
+    color: #D69B00;
+    font-size: 20px;
+}
+
+/* BOTÕES */
+
+.perfil-acoes {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px 20px 15px;
+    gap: 20px;
+}
+
+.botao-amigo,
+.botao-trofeus {
+    background-color: #FFE0A3;
+    border: 7px solid #B52A20;
+    border-radius: 50px;
+    color: #851510;
+    padding: 5px 15px;
+    font-family: Itim;
+    cursor: pointer;
+}
+
+.botao-amigo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 20px;
+}
+
+.botao-amigo img {
+    width: 35px;
+    height: 35px;
+}
+
+.botao-amigo span {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.botao-trofeus {
+    font-size: 38px;
+    min-width: 260px;
+}
+
+/* EFEITO DOS BOTÕES */
+
+.botao-amigo:hover,
+.botao-trofeus:hover {
+    background-color: #FFCA75;
+    transition: 0.2s;
+}
+
+
+
+/* FOOTER */
+footer {
+    background-color: black;
+    color: white;
+    font-size: 38px;
+    text-align: center;
+    width: 100%;
+    margin-top: 30px;
+    padding: 30px;
+}
+
+footer a {
+    text-decoration: none;
+    border: none;
+    outline: none;
+}
+
+
+.nav-link {
+    font-size: 15px;
+}
+
+.mini {
+    height: 45px;
+    width: 45px;
+    margin-left: 5px;
+}
+
+:hover.mini {
+    padding: 5px;
+    transition: 0.3s;
+}
+
+/* RESPONSIVIVEIS */
+@media (max-width: 1200px) {
+    .receitas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .receitas {
+        grid-template-columns: 1fr;
+    }
+
+    main {
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .pesquisa {
+        margin-left: 0;
+    }
+
+    footer {
+        font-size: 20px;
+    }
+}
+
+
+/* RESPONSIVIDADE DO PERFIL */
+
+@media (max-width: 991px) {
+
+    main {
+        width: 90%;
+        max-width: 900px;
+        margin: 30px auto;
+    }
+
+    .perfil-cabecalho {
+        flex-direction: column;
+        text-align: center;
+        padding: 25px;
+    }
+
+    .perfil-nome {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .perfil-nome h1 {
+        font-size: 40px;
+    }
+
+    .perfil-informacoes {
+        flex-direction: column;
+        gap: 30px;
+        padding: 35px 15px;
+    }
+
+    .perfil-acoes {
+        flex-direction: column;
+        padding-bottom: 25px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .avatar-img {
+        width: 160px;
+        height: 160px;
+    }
+
+    .perfil-nome h1 {
+        font-size: 32px;
+    }
+
+    .estatisticas p {
+        font-size: 24px;
+    }
+
+    .experiencia h2 {
+        font-size: 30px;
+    }
+
+    .botao-trofeus {
+        font-size: 28px;
+    }
+
+}
