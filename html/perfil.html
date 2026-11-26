@@ -27,7 +27,7 @@
             Menu
         </button>
 
-        <div class="offcanvas-lg offcanvas-start bg-body-tertiary border-end vh-100 p-3" tabindex="-1"
+        <div class="offcanvas-lg offcanvas-start border-end vh-100 p-3" tabindex="-1"
             id="sidebarLateral" aria-labelledby="sidebarLateralLabel"
             style="width: 220px; position: fixed; top: 0; left: 0; z-index: 1050;">
 
@@ -100,7 +100,7 @@
 
         <input class="form-control me-2" type="search" placeholder="Pesquisar receitas.." aria-label="pesquisar">
 
-        <button class="btn btn-outline-success" type="submit">
+        <button class="btn btn-outline-success me-2" type="submit">
             Enviar
         </button>
 
@@ -112,67 +112,67 @@
             <img src="../img/iconeperfil.jpg" class="mini" alt="">
         </a>
 
+        <button type="button" onclick="modoNoturno()" id="btnTema" class="btn btn-dark ms-2">
+            🌙
+        </button>
+
     </form>
 
     <br>
 
+    <main>
 
+        <section class="perfil-cabecalho">
 
-<main>
+            <img src="../img/Lena1.png" class="avatar-img" alt="Foto de perfil">
 
-  
-    <section class="perfil-cabecalho">
+            <div class="perfil-identificacao">
 
-        <img src="../img/Lena1.png" class="avatar-img" alt="Foto de perfil">
+                <div class="perfil-nome">
+                    <h1>James Baxter</h1>
+                    <span>10/04/1967</span>
+                </div>
 
-        <div class="perfil-identificacao">
-
-            <div class="perfil-nome">
-                <h1>James Baxter</h1>
-                <span>10/04/1967</span>
             </div>
 
-        </div>
+        </section>
 
-    </section>
+        <!-- INFORMAÇÕES DO PERFIL -->
+        <section class="perfil-informacoes">
 
-    <!-- INFORMAÇÕES DO PERFIL -->
-    <section class="perfil-informacoes">
+            <div class="estatisticas">
 
-        <div class="estatisticas">
+                <p>Seguidores: 67</p>
+                <p>Seguindo: 67</p>
 
-            <p>Seguidores: 67</p>
-            <p>Seguindo: 67</p>
+            </div>
 
-        </div>
+            <div class="experiencia">
 
-        <div class="experiencia">
+                <p class="nivel">Nível: 42</p>
+                <h2>Total de XP</h2>
+                <span>676767 XP</span>
 
-            <p class="nivel">Nível: 42</p>
-            <h2>Total de XP</h2>
-            <span>676767 XP</span>
+            </div>
 
-        </div>
+        </section>
 
-    </section>
+        <!-- BOTÕES DO PERFIL -->
+        <section class="perfil-acoes">
 
-    <!-- BOTÕES DO PERFIL -->
-    <section class="perfil-acoes">
+            <button type="button" class="botao-amigo">
+                <span>＋</span>
+                <img src="https://cdn-icons-png.flaticon.com/512/1077/1077114.png" alt="">
+                Convidar Amigo
+            </button>
 
-        <button class="botao-amigo">
-            <span>＋</span>
-            <img src="https://cdn-icons-png.flaticon.com/512/1077/1077114.png" alt="">
-            Convidar Amigo
-        </button>
+            <button type="button" class="botao-trofeus">
+                Troféus 🔥
+            </button>
 
-        <button class="botao-trofeus">
-            Troféus 🔥
-        </button>
+        </section>
 
-    </section>
-
-</main>
-
+    </main>
 
     <footer>
         <div class="container-fluid">
@@ -198,6 +198,27 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        const btnTema = document.getElementById("btnTema");
+
+        function aplicarTema(ativo) {
+            document.body.classList.toggle("dark-mode", ativo);
+            if (btnTema) {
+                btnTema.textContent = ativo ? "☀️" : "🌙";
+            }
+        }
+
+        function modoNoturno() {
+            const ativado = !document.body.classList.contains("dark-mode");
+            aplicarTema(ativado);
+            localStorage.setItem("hellaTastyDarkMode", ativado ? "1" : "0");
+        }
+
+        if (localStorage.getItem("hellaTastyDarkMode") === "1") {
+            aplicarTema(true);
+        }
+    </script>
 
 </body>
 

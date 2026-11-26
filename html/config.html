@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Configurações</title>
   <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon">
@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="../css/config.css">
 </head>
 <body>
-    <header>
+  <header>
     <button class="btn btn-dark d-lg-none m-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarLateral"
       aria-controls="sidebarLateral">
       <span class="navbar-toggler-icon" style="filter: invert(1);"></span> Menu
@@ -28,8 +28,8 @@
           <img src="../img/logo.png" id="logo" alt="logo do site" style="max-height: 50px;">
           <h3>Hella-Tasty!</h3>
         </a>
-        <button type="button" class="btn-close btn-close-white d-lg-none" data-bs-dismiss="offcanvas" data-bs-target="#sidebarLateral"
-          aria-label="Close"></button>
+        <button type="button" class="btn-close btn-close-white d-lg-none" data-bs-dismiss="offcanvas"
+          data-bs-target="#sidebarLateral" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body d-flex flex-column justify-content-between h-100 mt-3 p-0">
         <ul class="navbar-nav flex-column w-100 mb-auto">
@@ -61,46 +61,44 @@
         </ul>
       </div>
     </div>
-    </header>
-    <form class="d-flex pesquisa" role="search">
+  </header>
+
+  <form class="d-flex pesquisa" role="search">
     <input class="form-control me-2" type="search" placeholder="Pesquisar receitas.." aria-label="pesquisar">
-    <button class="btn btn-outline-success" type="submit">
+    <button class="btn btn-outline-success me-2" type="submit">
       Enviar
     </button>
     <a href="config.html"><img src="https://cdn-icons-png.flaticon.com/512/3524/3524636.png" class="mini" alt=""></a>
-    <a href="perfil.html"><img
-        src="../img/iconeperfil.jpg" class="mini"
-        alt=""></a>
+    <a href="perfil.html"><img src="../img/iconeperfil.jpg" class="mini" alt=""></a>
+    <button type="button" onclick="modoNoturno()" id="btnTema" class="btn btn-dark ms-2">
+      🌙
+    </button>
   </form><br>
-    <main>
-<div class="container-fluid">
-    <div class="configs">
-    <div class="modo-tela">
-            <span>Modo de tela:</span>
-            <button>Claro</button>
-            <button>Escuro</button>
-        </div>
 
+  <main>
+    <div class="container-fluid">
+      <div class="configs">
         <div class="opcoes">
-            <button>Mudar nome</button>
-            <button>Mudar email</button>
-            <button>Mudar senha</button>
+          <button type="button">Mudar nome</button>
+          <button type="button">Mudar email</button>
+          <button type="button">Mudar senha</button>
         </div>
 
         <div class="notificacoes">
-            <span>Receber notificações de novas receitas por email:</span>
-            <button>Sim</button>
-            <button>Não</button>
+          <span>Receber notificações de novas receitas por email:</span>
+          <button type="button">Sim</button>
+          <button type="button">Não</button>
         </div>
 
         <div class="excluir">
-            <button>Excluir conta</button>
+          <button type="button">Excluir conta</button>
         </div>
+      </div>
     </div>
-</div>
-</main>
-                <footer>
-                    <div class="container-fluid">
+  </main>
+
+  <footer>
+    <div class="container-fluid">
       <div class="col-12">
         <div class="row">
           <p> Equipe Hella-Tasty© todos os direitos reservados <br>
@@ -113,6 +111,27 @@
         </div>
       </div>
     </div>
-                </footer>
+  </footer>
+
+  <script>
+    const btnTema = document.getElementById("btnTema");
+
+    function aplicarTema(ativo) {
+      document.body.classList.toggle("dark-mode", ativo);
+      if (btnTema) {
+        btnTema.textContent = ativo ? "☀️" : "🌙";
+      }
+    }
+
+    function modoNoturno() {
+      const ativado = !document.body.classList.contains("dark-mode");
+      aplicarTema(ativado);
+      localStorage.setItem("hellaTastyDarkMode", ativado ? "1" : "0");
+    }
+
+    if (localStorage.getItem("hellaTastyDarkMode") === "1") {
+      aplicarTema(true);
+    }
+  </script>
 </body>
 </html>

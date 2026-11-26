@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -10,26 +9,23 @@
 }
 
 #sidebarLateral {
-  background-color: #FF4C1F !important;
-  color: #fff;
+    background-color: #FF4C1F !important;
+    color: #fff;
 }
 
 #sidebarLateral h3 {
-  color: #000000;
-
+    color: #000000;
 }
 
 #sidebarLateral .nav-link {
-  color: #000000 !important;
-  font-size: 20px;
-  background-color: #FFE0A3;
-  border-radius: 5px;
-
+    color: #000000 !important;
+    font-size: 20px;
+    background-color: #FFE0A3;
+    border-radius: 5px;
 }
 
 #sidebarLateral .nav-link:hover {
-  background-color: rgba(0, 0, 0, 0.1);
-  
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 /* MENU */
@@ -47,9 +43,10 @@
 }
 
 body {
-  background-image: url(../img/wallpaper.png);
-  background-color: #FF4C1F;
-  font-family: itim;
+    background-image: url(../img/wallpaper.png);
+    background-color: #FF4C1F;
+    font-family: itim;
+    transition: background-color 0.25s ease, color 0.25s ease;
 }
 
 #logo {
@@ -63,7 +60,6 @@ body {
     font-size: 20px;
     margin-top: 5px;
 }
-
 
 /* FILTROS */
 .filtros {
@@ -94,11 +90,11 @@ body {
 
 /* BARRA DE PESQUISA */
 .pesquisa {
-  margin-left: 220px;
-  padding: 10px 20px;
-  height: 60px;
-  background-color: #FF4C1F;
-  border-radius: 50px;
+    margin-left: 220px;
+    padding: 10px 20px;
+    height: 60px;
+    background-color: #FF4C1F;
+    border-radius: 50px;
 }
 
 .icones {
@@ -133,12 +129,10 @@ main {
     border-radius: 10px;
     overflow: hidden;
     background-color: #FFE0A3;
-    /* [NOVO] */
     border: 2px solid #000;
     cursor: pointer;
     transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
 }
-
 
 .receita-card:hover {
     transform: translateY(-8px) rotate(-1deg);
@@ -150,10 +144,8 @@ main {
     width: 100%;
     height: 180px;
     object-fit: cover;
-    /* [NOVO] */
     transition: transform 0.4s ease;
 }
-
 
 .receita-card:hover img {
     transform: scale(1.08);
@@ -172,7 +164,6 @@ main {
     margin: 0;
 }
 
-
 .titulo-card span {
     border: 2px solid #FF4C1F;
     padding: 0 5px;
@@ -183,7 +174,6 @@ main {
     background-color: #FF4C1F;
     color: #fff;
 }
-
 
 .pagina {
     display: none;
@@ -259,7 +249,6 @@ footer a {
     outline: none;
 }
 
-
 .nav-link {
     font-size: 15px;
 }
@@ -273,6 +262,92 @@ footer a {
 :hover.mini {
     padding: 5px;
     transition: 0.3s;
+}
+
+/* --- MODO ESCURO --- */
+body.dark-mode {
+    background-image: none;
+    background-color: #121212;
+    color: #f1f1f1;
+}
+
+body.dark-mode main {
+    background-color: #1b1b1b;
+}
+
+body.dark-mode .filtros select {
+    background-color: #2a2a2a;
+    color: #f1f1f1;
+    border-color: #444444;
+}
+
+body.dark-mode .pesquisa {
+    background-color: #1f1f1f;
+}
+
+body.dark-mode .pesquisa .form-control {
+    background-color: #2c2c2c;
+    color: #ffffff;
+    border-color: #444444;
+}
+
+body.dark-mode .pesquisa .form-control::placeholder {
+    color: #b5b5b5;
+}
+
+body.dark-mode .pesquisa .mini,
+body.dark-mode #sidebarLateral .icones {
+    filter: invert(1);
+}
+
+body.dark-mode .receita-card {
+    background-color: #2b2b2b;
+    color: #f5f5f5;
+    border-color: #444444;
+}
+
+body.dark-mode .receita-card:hover {
+    background-color: #363636;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+}
+
+body.dark-mode .titulo-card span {
+    border-color: #ff7b47;
+    color: #ffb36b;
+}
+
+body.dark-mode .receita-card:hover .titulo-card span {
+    background-color: #ff7b47;
+    color: #121212;
+}
+
+body.dark-mode #pag1:checked ~ .paginacao .num-1,
+body.dark-mode #pag2:checked ~ .paginacao .num-2 {
+    background-color: #383838;
+    outline: 2px solid #ff7b47;
+}
+
+body.dark-mode #sidebarLateral {
+    background-color: #181818 !important;
+    border-color: #333333 !important;
+}
+
+body.dark-mode #sidebarLateral .nav-link {
+    background-color: #2a2a2a;
+    color: #f1f1f1 !important;
+}
+
+body.dark-mode #sidebarLateral .nav-link:hover {
+    background-color: #3a3a3a;
+}
+
+body.dark-mode #sidebarLateral h3 {
+    color: #ffffff;
+}
+
+body.dark-mode footer {
+    background-color: #0b0b0b;
+    color: #f1f1f1;
 }
 
 /* RESPONSIVIVEIS */

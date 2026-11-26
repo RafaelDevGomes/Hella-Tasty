@@ -1,8 +1,7 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
-
 
 #sidebarLateral {
   background-color: #FF4C1F !important;
@@ -11,7 +10,6 @@
 
 #sidebarLateral h3 {
   color: #000000;
-
 }
 
 #sidebarLateral .nav-link {
@@ -19,12 +17,10 @@
   font-size: 20px;
   background-color: #FFE0A3;
   border-radius: 5px;
-
 }
 
 #sidebarLateral .nav-link:hover {
   background-color: rgba(0, 0, 0, 0.1);
-  
 }
 
 body {
@@ -32,17 +28,18 @@ body {
   background-color: #FF4C1F;
   font-family: itim;
   font-style: italic;
+  transition: background-color 0.25s ease, color 0.25s ease;
 }
 
-#logo{
+#logo {
   height: 100px;
   width: 50px;
 }
 
 @media (min-width: 992px) {
-  main, .conteudo-principal { 
-  margin-left: 220px;
-  border: 5px black;
+  main, .conteudo-principal {
+    margin-left: 220px;
+    border: 5px black;
   }
 }
 
@@ -54,11 +51,12 @@ body {
   border-radius: 50px;
 }
 
-.icones{
+.icones {
   height: 35px;
   width: 35px;
 }
-:hover.icones{
+
+:hover.icones {
   padding: 7px;
   transition: 0.2s;
 }
@@ -76,7 +74,6 @@ footer {
   color: white;
   font-size: 38px;
   text-align: center;
-  position: 0;
   width: 100%;
   margin-top: 30px;
   padding: 30px;
@@ -87,30 +84,35 @@ footer {
   width: 45px;
   margin-left: 5px;
 }
-:hover.mini{
+
+:hover.mini {
   padding: 5px;
   transition: 0.3s;
 }
-.card{
+
+.card {
   overflow: hidden;
   border-radius: 20px;
   border: none;
   position: relative;
   height: 100%;
-  position: relative;
   flex-direction: column;
 }
-.card:hover{
+
+.card:hover {
   padding: 10px;
   transition: 0.5s;
 }
-.card-title{
+
+.card-title {
   color: white;
 }
-.card-text1{
+
+.card-text1 {
   color: white;
 }
-.card-img1{
+
+.card-img1 {
   height: 220px;
   width: 200px;
   object-fit: cover;
@@ -118,10 +120,10 @@ footer {
 }
 
 .card-img-overlay {
-  background: rgba(0, 0, 0, 0.4); /* Cria uma camada escura leve para o texto destacar */
+  background: rgba(0, 0, 0, 0.4);
   display: flex;
   flex-direction: column;
-  justify-content: flex-end; /* Joga o texto para a parte de baixo do card */
+  justify-content: flex-end;
 }
 
 .card-title, .card-text1 {
@@ -134,20 +136,91 @@ footer {
   }
 }
 
-.card-main{
+.card-main {
   background-color: #FFE0A3;
   width: 100%;
 }
 
-.card-main-title{
+.card-main-title {
   color: black;
 }
 
-.card-main-text{
+.card-main-text {
   color: rgb(0, 0, 0);
 }
 
-.nhenhenhe{
+.nhenhenhe {
   font-family: papyrus;
   font-size: large;
+}
+
+/* --- MODO ESCURO --- */
+body.dark-mode {
+  background-image: none;
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+body.dark-mode main {
+  background-color: #1b1b1b;
+}
+
+body.dark-mode main > .container-fluid .card {
+  background-color: #222222;
+  color: #f1f1f1;
+}
+
+body.dark-mode .pesquisa {
+  background-color: #1f1f1f;
+}
+
+body.dark-mode .pesquisa .form-control {
+  background-color: #2c2c2c;
+  color: #ffffff;
+  border-color: #444444;
+}
+
+body.dark-mode .pesquisa .form-control::placeholder {
+  color: #b5b5b5;
+}
+
+body.dark-mode .pesquisa .mini,
+body.dark-mode #sidebarLateral .icones {
+  filter: invert(1);
+}
+
+body.dark-mode footer {
+  background-color: #0b0b0b;
+  color: #f1f1f1;
+}
+
+body.dark-mode .card-main {
+  background-color: #2b2b2b;
+}
+
+body.dark-mode .card-main-title,
+body.dark-mode .card-main-text {
+  color: #f5f5f5;
+}
+
+body.dark-mode .card-main a {
+  color: #ffb36b;
+}
+
+body.dark-mode #sidebarLateral {
+  background-color: #181818 !important;
+  border-color: #333333 !important;
+}
+
+body.dark-mode #sidebarLateral .nav-link {
+  background-color: #2a2a2a;
+  color: #f1f1f1 !important;
+}
+
+body.dark-mode #sidebarLateral .nav-link:hover {
+  background-color: #3a3a3a;
+}
+
+body.dark-mode #sidebarLateral h3 {
+  color: #ffffff;
 }

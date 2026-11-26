@@ -27,7 +27,7 @@
             Menu
         </button>
 
-        <div class="offcanvas-lg offcanvas-start bg-body-tertiary border-end vh-100 p-3" tabindex="-1"
+        <div class="offcanvas-lg offcanvas-start border-end vh-100 p-3" tabindex="-1"
             id="sidebarLateral" aria-labelledby="sidebarLateralLabel"
             style="width: 220px; position: fixed; top: 0; left: 0; z-index: 1050;">
 
@@ -100,7 +100,7 @@
 
         <input class="form-control me-2" type="search" placeholder="Pesquisar receitas.." aria-label="pesquisar">
 
-        <button class="btn btn-outline-success" type="submit">
+        <button class="btn btn-outline-success me-2" type="submit">
             Enviar
         </button>
 
@@ -111,6 +111,10 @@
         <a href="perfil.html">
             <img src="../img/iconeperfil.jpg" class="mini" alt="">
         </a>
+
+        <button type="button" onclick="modoNoturno()" id="btnTema" class="btn btn-dark ms-1">
+            🌙
+        </button>
 
     </form>
 
@@ -249,7 +253,7 @@
         <section class="receitas pagina pagina-2">
 
             <div class="card receita-card">
-                <img src="../img/burger.jpg" class="card-img-top" alt="Mousse de maracujá">
+                <img src="../img/burger.jpg" class="card-img-top" alt="Hambúrguer">
                 <div class="card-body">
                     <div class="titulo-card">
                         <h5>Hambúrguer</h5>
@@ -260,7 +264,7 @@
             </div>
 
             <div class="card receita-card">
-                <img src="../img/pizza.jpg" class="card-img-top" alt="Bolo de chocolate">
+                <img src="../img/pizza.jpg" class="card-img-top" alt="Pizza de quatro queijos">
                 <div class="card-body">
                     <div class="titulo-card">
                         <h5>Pizza de quatro queijos</h5>
@@ -306,6 +310,27 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        const btnTema = document.getElementById("btnTema");
+
+        function aplicarTema(ativo) {
+            document.body.classList.toggle("dark-mode", ativo);
+            if (btnTema) {
+                btnTema.textContent = ativo ? "☀️" : "🌙";
+            }
+        }
+
+        function modoNoturno() {
+            const ativado = !document.body.classList.contains("dark-mode");
+            aplicarTema(ativado);
+            localStorage.setItem("hellaTastyDarkMode", ativado ? "1" : "0");
+        }
+
+        if (localStorage.getItem("hellaTastyDarkMode") === "1") {
+            aplicarTema(true);
+        }
+    </script>
 
 </body>
 
