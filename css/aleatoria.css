@@ -57,12 +57,7 @@ body {
   padding: 7px;
 }
 
-main {
-  background-color: #FF4C1F;
-  border-radius: 15px;
-  padding: 20px;
-  margin: 16px;
-}
+
 
 @media (min-width: 992px) {
   main, .conteudo-principal {
@@ -162,10 +157,14 @@ footer {
 }
 
 #butao {
-  background-color: #FFE0A3;
+  background-color: #ff4800;
   border-radius: 10px;
   text-align: center;
-  cursor: pointer;
+  width: 700px;
+  margin: 0 auto;
+  margin-top: 30px;
+  color: white;
+  border: 3px solid #000000;
 }
 
 #butao:hover {
